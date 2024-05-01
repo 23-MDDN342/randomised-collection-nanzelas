@@ -3,7 +3,7 @@
  */
 
 const canvasWidth = 960;
-const canvasHeight = 500;
+const canvasHeight = 960;
 let curRandomSeed = 0;
 
 let lastSwapTime = 0;
@@ -17,7 +17,7 @@ function setup () {
   curRandomSeed = int(random(0, 1000));
 
   // rotation in degrees
-  angleMode(DEGREES);
+  // angleMode(DEGREES);
 }
 
 function changeRandomSeed() {
@@ -33,6 +33,7 @@ function mouseClicked() {
 }
 
 function draw () {
+
   if(millis() > lastSwapTime + millisPerSwap) {
     changeRandomSeed();
   }
@@ -42,46 +43,28 @@ function draw () {
 
   // clear screen
   background(bg_color1);
+
   noStroke();
 
   // draw a 7x4 grid of faces
-  let w = canvasWidth / 7;
+  let w = canvasWidth / 5;
   let h = canvasHeight / 4;
   for(let i=0; i<4; i++) {
     for(let j=0; j<7; j++) {
       let y = h/2 + h*i;
       let x = w/2 + w*j;
-      if (i == 0) {
+
         // center face
-        let eye_value = 2;
-        let tilt_value = random(-45, 45);
-        let mouth_value = random(1, 3);
-        let is_cyclops = random(0, 100);
-        if(is_cyclops < 10) {
-          eye_value = 1;
-          tilt_value = random(-5, 5);
-          mouth_value = random(5, 10);
-        }
+        let eye_value = int(random(1,6));
+        let mouth_value = int(random(1,6));
+
         push();
         translate(x, y);
         scale(w/25, h/25);
-        orangeAlienFace(tilt_value, eye_value, mouth_value);
+
+        blockFace(eye_value, mouth_value);
         pop();
-      }
-      else if (i > 0) {
-        // all other faces
-        push();
-        translate(x, y);
-        scale(w/25, h/25);
-        if((i+j)%2 == 0) {
-          simplePurpleFace();
-        }
-        else {
-          thinness_value = random(0, 100);
-          blockyFace(thinness_value);
-        }
-        pop();
-      }
+
     }
   }
 }
