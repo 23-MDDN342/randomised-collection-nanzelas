@@ -67,8 +67,10 @@ function blockFace(eye_value, mouth_value) {
     // angleMode(DEGREES);
     // rotate(tilt_value);
 
-    // body
+    // Body color weight
     noStroke();
+    fill(50);
+    rect(centerX+2, -2, headSize, headSize, 2);
     let randomColorByBody = random(1);
     if(randomColorByBody<0.2){
         fill(1,252,252);
@@ -90,20 +92,28 @@ function blockFace(eye_value, mouth_value) {
         fill(255,66,68);
     }
 
+    if(randomColorByBody>0.8){
+        eye_value=1;
+    }
+    if(randomColorByBody<0.5){
+        eye_value=3;
+    }
+
 
 
     rect(centerX, 0, headSize, headSize, 2);
-    //eye
-    if (eye_value == 1) {
+    //eye conditional randomness
+    if (randomColorByBody>0.8) {
         fill(0);
         ellipse(centerX - 5, Iy, 1, 3);
         ellipse(centerX + 5, Iy, 1, 3);
-    }
+    }else
+
     if (eye_value ==2) {
         fill(0);
         ellipse(centerX - 5, Iy, 3, 3);
         ellipse(centerX + 5, Iy, 3, 3);
-    }
+    }else
     if (eye_value==3) {
         fill(255);
         ellipse(centerX - 5, Iy, 3, 3);
@@ -111,12 +121,12 @@ function blockFace(eye_value, mouth_value) {
         fill(0);
         ellipse(centerX - 5, Iy, 1.5, 1.5);
         ellipse(centerX + 5, Iy, 1.5, 1.5);
-    }
+    }else
     if (eye_value == 4) {
 
         drawStar(centerX - 5, Iy);
         drawStar(centerX + 5, Iy);
-    }
+    }else
 
     if (eye_value ==5) {
 
@@ -130,11 +140,13 @@ function blockFace(eye_value, mouth_value) {
         scale(-1,1);
         drawEye();
         pop();
-        // fill(0);
-        // textSize(8);
-        // text(">", centerX - 7, Iy + 3);
-        // text("<", centerX + 1, Iy + 3);
+
+    }else{
+        fill(0);
+        ellipse(centerX - 5, Iy, 1, 3);
+        ellipse(centerX + 5, Iy, 1, 3);
     }
+
     if (mouth_value == 1) {
 
         fill(0);
