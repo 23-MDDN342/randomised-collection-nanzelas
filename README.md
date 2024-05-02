@@ -10,6 +10,13 @@
 >Part 4:I tried experiments with weighted selection and conditional randomness. My weighting assignment is the weight of the colors of the five bodies. blue 20%, green 10%-20%, purple 60%-80%, orange 20%-50%, red 80%-100% ![image](https://github.com/23-MDDN342/randomised-collection-nanzelas/assets/90404037/a57380b8-fb0d-475d-a11f-595919d47e8f)
 >Experiments of conditional randomness control eye patterns through body color.![image](https://github.com/23-MDDN342/randomised-collection-nanzelas/assets/90404037/955e1158-3237-41ac-ad7c-1963a87ed30e)
 >
+>part 5: I added some details, added shadows to make him look more three-dimensional, improve the expression.
+>
+>Network Moji-Final
+>
+>My final design for a random collection was inspired by the Internet emoji art of Apple emojis and some minimalist card-like emojis. I am relatively happy with my end result, which has a wide range of random variations in my expression collection while having a consistent design. Because of this change, each face has a different style. This fits with the uncertainty and randomness of Internet emojis. Weighted selection and conditional randomness make my face more varied, highlighting the main eyes. My weighting of colors is blue 20%, green 10%-20%, purple 60%-80%, orange 20%-50%, and red 80%-100%. There is a relatively obvious weight tilt. Conditional randomness is the control of eye patterns by body color.
+>
+>I may have added more details to my design, making my elements richer, but now it is also in line with my simple design philosophy.
 
 
 
