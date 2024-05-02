@@ -3,7 +3,7 @@
  */
 
 const canvasWidth = 960;
-const canvasHeight = 960;
+const canvasHeight = 500;
 let curRandomSeed = 0;
 
 let lastSwapTime = 0;
@@ -60,7 +60,7 @@ function draw () {
 
         push();
         translate(x, y);
-        scale(w/25, h/25);
+        scale(h/25,h/25 );
 
         blockFace(eye_value, mouth_value);
         pop();
